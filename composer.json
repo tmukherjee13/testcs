@@ -1,0 +1,12 @@
+{
+    "name": "tmukherjee13/testcs",
+    "authors": [
+        {
+            "name": "Tarun M",
+            "email": "tarun.mukherjee@indusnet.co.in"
+        }
+    ],
+    "require": {
+    	"tmukherjee13/yii2-reverse-migration": "*"
+    }
+}
