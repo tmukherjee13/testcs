@@ -276,7 +276,7 @@ SQL;
     /**
      * Returns the name of the data migration file created
      * @param array $tables the list of tables
-     * @return string
+     * @return integer|null
      */
     public function actionData(array $tables)
     {
@@ -339,7 +339,7 @@ SQL;
     /**
      * Returns the name of the database migration file created
      * @param string $args the schema name
-     * @return string
+     * @return integer
      */
     public function actionSchema($args)
     {
@@ -366,7 +366,6 @@ SQL;
             $generateTables[] = $table->name;
         }
         $this->actionTable($generateTables);
-        // $this->actionData($generateTables);
         return self::EXIT_CODE_NORMAL;
 
     }
