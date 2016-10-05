@@ -81,7 +81,10 @@ class MigrationController extends BaseMigrateController
                 throw new Exception("The 'db' option must refer to the application component ID of a DB connection.");
             }
 
-            $path = Yii::getAlias($this->migrationPath)?Yii::getAlias($this->migrationPath):'';
+            $path = Yii::getAlias($this->migrationPath);
+            if(!$path)
+                $path  = \Yii::$app->basePath.'console/migrations';
+
             if (!is_dir($path)) {
                 if ($action->id !== 'table') {
 
