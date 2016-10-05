@@ -1,12 +1,23 @@
 {
-    "name": "tmukherjee13/testcs",
-    "authors": [
-        {
-            "name": "Tarun M",
-            "email": "tarun.mukherjee@indusnet.co.in"
-        }
-    ],
+    "name": "tmukherjee13/yii2-reverse-migration",
+    "description": "Generate working migration classes from existing Database",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "database", "migration"],
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Tarun Mukherjee",
+        "email": "tmukherjee13@gmail.com"
+    }],
     "require": {
-    	"tmukherjee13/yii2-reverse-migration": "*"
-    }
+        "yiisoft/yii2": ">2.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "tmukherjee13\\migration\\": ""
+        }
+    },
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/tmukherjee13/yii2-reverse-migration.git"
+    }]
 }
